@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #232f3e;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20px;
+            gap: 20px;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 10px 0;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #232f3e;
+            font-size: 16px;
+            display: block;
+        }
+
+        .main-content {
+            flex-grow: 1;
+            min-width: 300px;
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-header img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+        }
+
+        .profile-header h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .profile-header p {
+            color: #777;
+        }
+
+        .section-title {
+            background-color: #f7f7f7;
+            padding: 10px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .section-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #232f3e;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .main-content {
+                width: 100%;
+            }
+
+            .profile-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .profile-header img {
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 20px;
+            }
+
+            .profile-header h1 {
+                font-size: 22px;
+            }
+
+            .profile-header p {
+                font-size: 14px;
+            }
+
+            .sidebar h2 {
+                font-size: 16px;
+            }
+
+            .sidebar ul li a {
+                font-size: 14px;
+            }
+
+            .section-title {
+                font-size: 16px;
+            }
+
+            .section-content {
+                padding: 15px;
+            }
+
+            footer p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Your User Profile</h1>
+</header>
+
+<div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Account Navigation</h2>
+        <ul>
+            <li><a href="#">Your Account</a></li>
+            <li><a href="#">Your Orders</a></li>
+            <li><a href="#">Your Wish List</a></li>
+            <li><a href="#">Your Recommendations</a></li>
+            <li><a href="#">Your Prime Membership</a></li>
+            <li><a href="#">Your Prime Video</a></li>
+            <li><a href="#">Your Subscribe & Save Items</a></li>
+            <li><a href="#">Memberships & Subscriptions</a></li>
+            <li><a href="#">Your Seller Account</a></li>
+            <li><a href="#">Manage Your Content and Devices</a></li>
+            <li><a href="#">Your Free Amazon Business Account</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Profile Header -->
+        <div class="profile-header">
+            <img src="https://via.placeholder.com/100" alt="Profile Picture">
+            <div>
+                <h1>John Doe</h1>
+                <p>Prime Member</p>
+                <p>Account Created: January 15, 2020</p>
+            </div>
+        </div>
+
+        <!-- Account Information Section -->
+        <div class="section-title">Account Information</div>
+        <div class="section-content">
+            <p><strong>Email:</strong> john.doe@example.com</p>
+            <p><strong>Phone Number:</strong> (123) 456-7890</p>
+            <button>Edit Profile</button>
+        </div>
+
+        <!-- Orders Section -->
+        <div class="section-title">Your Orders</div>
+        <div class="section-content">
+            <p>View your past orders, track packages, and more.</p>
+            <button>View Orders</button>
+        </div>
+
+        <!-- Wish List Section -->
+        <div class="section-title">Your Wish List</div>
+        <div class="section-content">
+            <p>See and manage your saved items for later.</p>
+            <button>View Wish List</button>
+        </div>
+
+        <!-- Prime Membership Section -->
+        <div class="section-title">Your Prime Membership</div>
+        <div class="section-content">
+            <p>Manage your Prime membership settings and benefits.</p>
+            <button>Manage Prime</button>
+        </div>
+
+        <!-- Business Account Section -->
+        <div class="section-title">Your Free Amazon Business Account</div>
+        <div class="section-content">
+            <p>Manage your Amazon Business account settings and preferences.</p>
+            <button>Manage Business Account</button>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
